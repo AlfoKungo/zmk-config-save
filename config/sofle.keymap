@@ -15,7 +15,7 @@
 #define LEFT_LAYER 4
 
 &sl {
-    release-after-ms = <5000>;
+    release-after-ms = <2000>;
 };
 
 
