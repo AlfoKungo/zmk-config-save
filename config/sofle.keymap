@@ -13,6 +13,11 @@
 #define DEFAULT 0
 #define LAYER_PICKER 3
 
+&sl {
+    release-after-ms = <5000>;
+};
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
