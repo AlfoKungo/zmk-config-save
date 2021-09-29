@@ -12,6 +12,7 @@
 
 #define DEFAULT 0
 #define LAYER_PICKER 3
+#define LEFT_LAYER
 
 &sl {
     release-after-ms = <5000>;
@@ -30,11 +31,11 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
-&sl LAYER_PICKER	&kp N1		&kp N2		&kp N3		&kp N4		&kp N5									&kp N6	&kp N7		&kp N8		&kp N9		&kp N0		&none
-&kp ESC				&kp Q		&kp W		&kp E		&kp R		&kp T									&kp Y	&kp U		&kp I		&kp O		&kp P		&kp BSPC
-&kp TAB				&kp A		&kp S		&kp D		&kp F		&kp G									&kp H	&kp J		&kp K		&kp L		&kp SEMI	&kp SQT
-&kp LSHFT			&kp Z		&kp X		&kp C		&kp V		&kp B			&kp C_MUTE		&none	&kp N	&kp M		&kp COMMA	&kp DOT		&kp FSLH	&kp RSHFT
-					&kp LGUI	&kp	LALT	&kp LCTRL	&kp SPACE	&kp RET			&kp SPACE		&mo 2	&kp RCTRL	&kp RALT	&kp RGUI
+&sl LAYER_PICKER	&kp N1			&kp N2		&kp N3		&kp N4		&kp N5										&kp N6	&kp N7		&kp N8		&kp N9		&kp N0		&none
+&kp ESC				&kp Q			&kp W		&kp E		&kp R		&kp T										&kp Y	&kp U		&kp I		&kp O		&kp P		&kp BSPC
+&kp TAB				&kp A			&kp S		&kp D		&kp F		&kp G										&kp H	&kp J		&kp K		&kp L		&kp SEMI	&kp SQT
+&kp LSHFT			&kp Z			&kp X		&kp C		&kp V		&kp B			&kp C_MUTE			&none	&kp N	&kp M		&kp COMMA	&kp DOT		&kp FSLH	&kp RSHFT
+					&mo LEFT_LAYER	&kp	LALT	&kp LCTRL	&kp SPACE	&kp RET			&kp SPACE			&mo 2	&kp RCTRL	&kp RALT	&kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -85,11 +86,30 @@
 // |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
 //              |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
-&sl LAYER_PICKER	&to 0			&to 1				&to 2			&none				&none								&none	&none	&none	&none	&none	&none
-&none				&kp C_PREVIOUS	&kp C_PLAY_PAUSE	&kp C_NEXT		&kp PRINTSCREEN		&none								&none	&none	&none	&none	&none	&none
-&none				&none			&kp C_SLEEP			&none			&bootloader				&none								&none	&none	&none	&none	&none	&none
-&none				&none			&none    			&none			&none				&none			&none		&none	&none	&none	&none	&none	&none	&none
-									&none				&none			&none				&out OUT_TOG  	&none		&none	&none	&none	&none	&none
+&sl LAYER_PICKER	&to 0			&to 1				&to 2			&none				&none									&none	&none	&none	&none	&none	&none
+&none				&kp C_PREVIOUS	&kp C_PLAY_PAUSE	&kp C_NEXT		&kp PRINTSCREEN		&none									&none	&none	&none	&none	&none	&none
+&none				&none			&kp C_SLEEP			&none			&bootloader			&none									&none	&none	&none	&none	&none	&none
+&none				&none			&none    			&none			&none				&none			&none			&none	&none	&none	&none	&none	&none	&none
+									&none				&none			&none				&out OUT_TOG  	&none			&none	&none	&none	&none	&none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+		
+		left {
+// ------------------------------------------------------------------------------------------------------------
+// |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
+// |     | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
+// |     | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
+// |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
+//              |      |       |       |      |      |  |      |      |      |       |      |
+            bindings = <
+
+&none	&kp N6	&kp N7			&kp N8		&kp N9		&kp N0								&none	&none	&none	&none	&none	&none
+&none	&kp Y	&kp U			&kp I		&kp O		&kp P								&none	&none	&none	&none	&none	&none
+&none	&kp H	&kp J			&kp K		&kp L		&kp SEMI							&none	&none	&none	&none	&none	&none
+&none	&kp N	&kp M			&kp COMMA	&kp DOT		&kp FSLH	&none			&none	&none	&none	&none	&none	&none	&none
+				&mo LEFT_LAYER	&none		&none		&kp RGUI  	&none			&none	&none	&none	&none	&none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
