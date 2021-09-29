@@ -12,7 +12,7 @@
 
 #define DEFAULT 0
 #define LAYER_PICKER 3
-#define LEFT_LAYER
+#define LEFT_LAYER 4
 
 &sl {
     release-after-ms = <5000>;
