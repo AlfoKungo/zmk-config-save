@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: AlfoKungo
+      url-base: https://github.com/AlfoKungo
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: AlfoKungo
       revision: main
       import: app/west.yml
   self:
