@@ -23,7 +23,7 @@
     acceleration-exponent = <1>;
 };
 
-&mwho {
+&mwh {
     time-to-max-speed-ms = <3500>;
     acceleration-exponent = <1>;
 };
