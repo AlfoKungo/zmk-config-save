@@ -44,7 +44,7 @@
 };
 
 #define U_MOUSE_MOVE_MAX 1250
-#define U_MOUSE_SCROLL_MAX 125
+#define U_MOUSE_SCROLL_MAX 30
 
 #undef MOVE_UP
 #undef MOVE_DOWN
