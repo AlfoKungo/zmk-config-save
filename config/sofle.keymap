@@ -19,7 +19,7 @@
     release-after-ms = <2000>;
 };
 
-&mmv {
+/* &mmv {
     time-to-max-speed-ms = <600>;
     acceleration-exponent = <1>;
 };
@@ -27,9 +27,9 @@
 &mwh {
     time-to-max-speed-ms = <3500>;
     acceleration-exponent = <1>;
-};
+}; */
 
-#define U_MOUSE_MOVE_MAX 1250
+/* #define U_MOUSE_MOVE_MAX 1250
 #define U_MOUSE_SCROLL_MAX 100
 
 #undef MOVE_UP
@@ -48,7 +48,7 @@
 #define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
 #define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
 #define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX) */
 
 
 / {
