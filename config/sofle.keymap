@@ -19,7 +19,7 @@
     release-after-ms = <2000>;
 };
 
-/* &mmv {
+&mmv {
     time-to-max-speed-ms = <600>;
     acceleration-exponent = <1>;
 };
@@ -30,9 +30,9 @@
 };
 
 #define U_MOUSE_MOVE_MAX 1250
-#define U_MOUSE_SCROLL_MAX 12 */
+#define U_MOUSE_SCROLL_MAX 12
 
-
+/* // For Ipad
 &mmv {
     time-to-max-speed-ms = <600>;
     acceleration-exponent = <1>;
@@ -41,7 +41,7 @@
 &mwh {
     time-to-max-speed-ms = <500>;
     acceleration-exponent = <1>;
-};
+}; */
 
 #define U_MOUSE_MOVE_MAX 1250
 #define U_MOUSE_SCROLL_MAX 30
