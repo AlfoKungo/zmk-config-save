@@ -1,11 +1,11 @@
 manifest:
   remotes:
-    - name: krikun98
-      url-base: https://github.com/krikun98
+    - name: stephen
+      url-base: https://github.com/stephen
   projects:
     - name: zmk
-      remote: krikun98
-      revision: mouse-pr-acceleration
+      remote: stephen
+      revision: split-encoder
       import: app/west.yml
   self:
     path: config
