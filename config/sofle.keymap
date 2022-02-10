@@ -24,7 +24,7 @@
     acceleration-exponent = <1>;
 };
 
-&mwh {
+/*&mwh {
     time-to-max-speed-ms = <2500>;
     acceleration-exponent = <0>;
 };
@@ -41,10 +41,12 @@
 &mwh {
     time-to-max-speed-ms = <500>;
     acceleration-exponent = <1>;
-}; */
+}; //*
 
+ 
 #define U_MOUSE_MOVE_MAX 1250
 #define U_MOUSE_SCROLL_MAX 30
+
 
 #undef MOVE_UP
 #undef MOVE_DOWN
@@ -63,7 +65,7 @@
 #define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
 #define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
 #define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
-
+*/
 
 / {
     keymap {
@@ -97,13 +99,13 @@
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
 &sl LAYER_PICKER	&kp F1				&kp F2			&kp F3				&kp F4				&kp F5												&kp F6		&kp F7		&kp F8			&kp F9		&kp F10		&kp F11
-&bt BT_CLR			&mwh SCROLL_UP		&kp UP			&mwh SCROLL_DOWN	&kp C_PLAY_PAUSE	&none												&kp PG_UP	&kp PG_DN	&kp CARET		&kp AMPS	&none		&kp F12
+&bt BT_CLR			&none				&kp UP			&none	&kp C_PLAY_PAUSE	&none												&kp PG_UP	&kp PG_DN	&kp CARET		&kp AMPS	&none		&kp F12
 &kp BSPC			&kp LEFT			&kp DOWN		&kp RIGHT			&kp DEL				&kp	TILDE											&kp HOME	&kp END		&kp MINUS		&kp EQUAL	&kp	PIPE	&kp BSPC
 &kp LSHIFT			&mmv MOVE_LEFT		&mmv MOVE_DOWN	&mmv MOVE_UP		&mmv MOVE_RIGHT		&mkp LCLK		&out OUT_TOG			&none		&kp LBKT	&kp RBKT	&kp LBRC		&kp RBRC	&kp BSLH	&kp RSHFT
 										&kp	LALT		&kp LCTRL			&none				&kp SPACE		&kp RET					&kp RET		&kp SPACE	&none		&kp RALT		&none
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer { // 2
